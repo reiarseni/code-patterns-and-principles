@@ -43,7 +43,7 @@ Comprehensive collection of programming concepts, design patterns, and refactori
 ## 🔍 Otros Temas
 - [Recursivo vs Iterativo en Python](others/recursivo-vs-iterativo-python.md)
 - [Caso Integrador en JavaScript](others/caso-integrador-javascript.md)
-- [Imágenes y Debounce Filter](others/images-debounge-filter.md)
+- [Imágenes y Debounce Filter](others/images-debounce-filter.md)
 - [Message Broker en Python](others/message-broker-python.md)
 - [Gestor de Tareas en Java](others/task-manager-java.md)
 
