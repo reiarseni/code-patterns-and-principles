@@ -1,5 +1,17 @@
 ## Principio de Abierto/Cerrado (Open-Close Principle, LSP)
 
+### Definición
+
+**"Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas a la extensión, pero cerradas a la modificación."**
+
+### Explicación del Principio
+
+1. **Abierto a la Extensión**: Esto significa que el comportamiento de un módulo o clase puede ser extendido. Se pueden añadir nuevas funcionalidades o comportamientos sin necesidad de modificar el código existente. Esto se puede lograr, por ejemplo, a través de la herencia, interfaces o la composición.
+
+2. **Cerrado a la Modificación**: Indica que una vez que una clase o módulo ha sido desarrollada y desplegada, no debería ser modificada. De esta manera, se minimizan los riesgos de introducir errores en el sistema existente, ya que el código que ya funciona se deja intacto.
+
+### Ejemplo
+
 A continuación se muestra un ejemplo clásico de refactorización para cumplir con el Principio Abierto/Cerrado (OCP) en un escenario real: el cálculo de descuentos en un e-commerce. Inicialmente, el cálculo de descuento se implementa con condicionales, lo que obliga a modificar la clase cada vez que se agrega un nuevo tipo de descuento. Luego se refactoriza utilizando interfaces y clases concretas, de forma que se pueden añadir nuevos descuentos sin modificar el código existente.
 
 ### Versión sin aplicar OCP (Código original)
@@ -92,6 +104,18 @@ public class Main {
 }
 ```
 
-### Conclusión
+### Conclusión del Ejemplo
 
 En esta versión, la clase `DiscountCalculator` está abierta a la extensión mediante la inyección de diferentes estrategias de descuento, pero cerrada a modificaciones en su lógica interna. Esto cumple con el OCP y permite agregar nuevos descuentos (por ejemplo, descuentos por temporada, por fidelidad, etc.) sin alterar el código existente.
+
+### Beneficios del Principio Abierto/Cerrado
+
+- **Mantenibilidad**: Al permitir que se añadan nuevas funcionalidades sin alterar el código existente, se reduce el riesgo de introducir errores y se facilita el mantenimiento del software a largo plazo.
+
+- **Flexibilidad**: Facilita la adaptación del software a cambios en los requisitos, ya que nuevas funcionalidades pueden implementarse fácilmente sin requerir cambios en la lógica ya establecida.
+
+- **Reutilización**: Fomenta la creación de componentes que pueden ser reutilizados en diferentes contextos, ya que se pueden extender sin necesidad de ser modificados.
+
+### Conclusión
+
+El Principio Abierto/Cerrado es fundamental para desarrollar software robusto y escalable. Promueve un diseño que se adapta a cambios y que es menos propenso a errores al facilitar la extensión de las funcionalidades sin realizar modificaciones en el código ya existente. ¿Hay algún aspecto específico de este principio que te gustaría explorar más?
